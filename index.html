@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ساعة يد فاخرة - متجر أناقتك</title>
+
+    <!-- استدعاء ملفات خارجية لاحقاً -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <!-- ✅ الهيدر -->
+    <header>
+        <h1>🕒 متجر أناقتك</h1>
+        <nav>
+            <a href="store.html">جميع المنتجات</a>
+        </nav>
+    </header>
+
+    <!-- ✅ اسم المنتج والسعر -->
+    <section id="product-overview">
+        <h2>ساعة يد فاخرة</h2>
+        <p class="price">السعر: <strong>4500 دج</strong></p>
+        <p class="short-description">ساعة أنيقة بتصميم فاخر، تناسب جميع الأذواق.</p>
+    </section>
+
+    <!-- ✅ صور المنتج -->
+    <section id="product-images">
+        <img src="main.png" alt="الساعة - الصورة الرئيسية" id="mainImage">
+        <div class="gallery">
+            <img src="1.png" alt="صورة جانبية">
+            <img src="2.png" alt="صورة خلفية">
+            <img src="3.png" alt="صورة أثناء الارتداء">
+        </div>
+    </section>
+
+    <!-- ✅ وصف مفصل -->
+    <section id="product-details">
+        <h3>تفاصيل المنتج</h3>
+        <ul>
+            <li>ضد الماء</li>
+            <li>بطارية تدوم طويلاً</li>
+            <li>سوار جلدي فاخر</li>
+            <li>مناسبة للمناسبات اليومية والرسمية</li>
+        </ul>
+    </section>
+
+    <!-- ✅ خدمات المتجر -->
+    <section id="store-services">
+        <h3>لماذا تثق بنا؟</h3>
+        <ul>
+            <li>✅ الدفع عند الاستلام</li>
+            <li>✅ مراجعة المنتج قبل الدفع</li>
+            <li>✅ ضمان استرجاع خلال 3 أيام</li>
+            <li>✅ توصيل سريع خلال 48 ساعة</li>
+            <li>✅ دعم عملاء 24/7</li>
+            <li>✅ تغليف ممتاز ومحمي</li>
+        </ul>
+    </section>
+
+    <!-- ✅ نموذج الطلب -->
+    <section id="order-form">
+        <h3>اطلب الآن</h3>
+
+        <form id="productOrderForm" method="POST" action="submit_order.php">
+            <!-- 🔐 متغيرات المنتج -->
+            <input type="hidden" name="product_id" value="1234">
+            <input type="hidden" name="product_name" value="ساعة يد فاخرة">
+            <input type="hidden" name="unit_price" value="4500">
+
+            <!-- 🛒 الكمية -->
+            <label for="quantity">الكمية:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+
+            <!-- 🧑‍💼 الاسم الكامل -->
+            <label for="fullname">الاسم الكامل:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <!-- 📞 رقم الهاتف -->
+            <label for="phone">رقم الهاتف:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <!-- 🌍 الولاية -->
+            <label for="wilaya">الولاية:</label>
+            <input type="text" id="wilaya" name="wilaya" required>
+
+            <!-- 🏘️ البلدية -->
+            <label for="commune">البلدية:</label>
+            <input type="text" id="commune" name="commune" required>
+
+            <!-- 🚚 سعر التوصيل -->
+            <label for="delivery">سعر التوصيل (دج):</label>
+            <input type="number" id="delivery" name="delivery" value="300" required>
+
+            <!-- 🔒 عبارة تطمين -->
+            <p class="privacy-message">🔒 معلوماتك محمية وسرية 100%</p>
+
+            <!-- 🛍️ زر الشراء -->
+            <button type="submit" id="buyNowBtn">اشتري الآن</button>
+        </form>
+    </section>
+
+    <!-- ✅ فوتر -->
+    <footer>
+        <div class="social-links">
+            <h4>تابعنا</h4>
+            <ul>
+                <li><a href="#">📘 فيسبوك</a></li>
+                <li><a href="#">📸 إنستغرام</a></li>
+                <li><a href="#">📱 واتساب</a></li>
+            </ul>
+        </div>
+
+        <div class="faq">
+            <h4>الأسئلة الشائعة</h4>
+            <ul>
+                <li><a href="#">كيف أتابع طلبي؟</a></li>
+                <li><a href="#">هل يمكنني استرجاع المنتج؟</a></li>
+                <li><a href="#">كم مدة التوصيل؟</a></li>
+            </ul>
+        </div>
+
+        <div class="back-to-top">
+            <a href="#top">🔝 العودة للأعلى</a>
+        </div>
+
+        <p class="copyright">
+            &copy; 2025 متجر أناقتك. جميع الحقوق محفوظة.
+        </p>
+    </footer>
+
+</body>
+</html>
